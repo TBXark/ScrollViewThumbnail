@@ -7,8 +7,8 @@ Quickly create thumbnails for zoomed views in UIScrollview with just a single li
 [![License](https://img.shields.io/cocoapods/l/ScrollViewThumbnail.svg?style=flat)](http://cocoapods.org/pods/ScrollViewThumbnail)
 [![Platform](https://img.shields.io/cocoapods/p/ScrollViewThumbnail.svg?style=flat)](http://cocoapods.org/pods/ScrollViewThumbnail)
 
-![./Example/demo.png]()
-![./Example/demo2.gif]()
+![](Example/demo.png)
+![](Example/demo2.gif)
 
 
 ## Example
