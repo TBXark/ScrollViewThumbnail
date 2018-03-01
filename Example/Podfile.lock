@@ -1,0 +1,16 @@
+PODS:
+  - ScrollViewThumbnail (0.1.0)
+
+DEPENDENCIES:
+  - ScrollViewThumbnail (from `../`)
+
+EXTERNAL SOURCES:
+  ScrollViewThumbnail:
+    :path: ../
+
+SPEC CHECKSUMS:
+  ScrollViewThumbnail: 968d1b4874c8ce36e63895c98e3cb25104314655
+
+PODFILE CHECKSUM: d490925bdf713ce92fefe5a95827804913b3817d
+
+COCOAPODS: 1.4.0

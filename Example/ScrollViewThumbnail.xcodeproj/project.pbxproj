@@ -29,9 +29,9 @@
 
 /* Begin PBXFileReference section */
 		184A9D32EEB2483FC40C6702 /* Pods-ScrollViewThumbnail_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ScrollViewThumbnail_Example.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ScrollViewThumbnail_Example/Pods-ScrollViewThumbnail_Example.debug.xcconfig"; sourceTree = "<group>"; };
-		1BE4CB8B06122D2BFB3FB4C4 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; name = README.md; path = ../README.md; sourceTree = "<group>"; };
+		1BE4CB8B06122D2BFB3FB4C4 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		277A2BE7CB36234266211120 /* Pods-ScrollViewThumbnail_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ScrollViewThumbnail_Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ScrollViewThumbnail_Tests/Pods-ScrollViewThumbnail_Tests.debug.xcconfig"; sourceTree = "<group>"; };
-		4DD31509ADA197E14A724F73 /* ScrollViewThumbnail.podspec */ = {isa = PBXFileReference; includeInIndex = 1; name = ScrollViewThumbnail.podspec; path = ../ScrollViewThumbnail.podspec; sourceTree = "<group>"; };
+		4DD31509ADA197E14A724F73 /* ScrollViewThumbnail.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = ScrollViewThumbnail.podspec; path = ../ScrollViewThumbnail.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		607FACD01AFB9204008FA782 /* ScrollViewThumbnail_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ScrollViewThumbnail_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACD41AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		607FACD51AFB9204008FA782 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -44,7 +44,7 @@
 		607FACEB1AFB9204008FA782 /* Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests.swift; sourceTree = "<group>"; };
 		61BCFAA507B1417E97D69278 /* Pods_ScrollViewThumbnail_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ScrollViewThumbnail_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AFE315AF0261E6EEF56E51CB /* Pods-ScrollViewThumbnail_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ScrollViewThumbnail_Example.release.xcconfig"; path = "Pods/Target Support Files/Pods-ScrollViewThumbnail_Example/Pods-ScrollViewThumbnail_Example.release.xcconfig"; sourceTree = "<group>"; };
-		DF5E72B4A4D8A30B2FAB8AAD /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
+		DF5E72B4A4D8A30B2FAB8AAD /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		E6D4E3BA76F1BE954DDE9815 /* Pods-ScrollViewThumbnail_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ScrollViewThumbnail_Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ScrollViewThumbnail_Tests/Pods-ScrollViewThumbnail_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		F6D11BEB01A0DBEF2D7A88BD /* Pods_ScrollViewThumbnail_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ScrollViewThumbnail_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -215,10 +215,12 @@
 				TargetAttributes = {
 					607FACCF1AFB9204008FA782 = {
 						CreatedOnToolsVersion = 6.3.1;
+						DevelopmentTeam = 858CBVXSWP;
 						LastSwiftMigration = 0900;
 					};
 					607FACE41AFB9204008FA782 = {
 						CreatedOnToolsVersion = 6.3.1;
+						DevelopmentTeam = 858CBVXSWP;
 						LastSwiftMigration = 0900;
 						TestTargetID = 607FACCF1AFB9204008FA782;
 					};
@@ -517,6 +519,7 @@
 			baseConfigurationReference = 184A9D32EEB2483FC40C6702 /* Pods-ScrollViewThumbnail_Example.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 858CBVXSWP;
 				INFOPLIST_FILE = ScrollViewThumbnail/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MODULE_NAME = ExampleApp;
@@ -532,6 +535,7 @@
 			baseConfigurationReference = AFE315AF0261E6EEF56E51CB /* Pods-ScrollViewThumbnail_Example.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 858CBVXSWP;
 				INFOPLIST_FILE = ScrollViewThumbnail/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MODULE_NAME = ExampleApp;
@@ -546,6 +550,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 277A2BE7CB36234266211120 /* Pods-ScrollViewThumbnail_Tests.debug.xcconfig */;
 			buildSettings = {
+				DEVELOPMENT_TEAM = 858CBVXSWP;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
@@ -567,6 +572,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = E6D4E3BA76F1BE954DDE9815 /* Pods-ScrollViewThumbnail_Tests.release.xcconfig */;
 			buildSettings = {
+				DEVELOPMENT_TEAM = 858CBVXSWP;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",

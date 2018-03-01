@@ -1,0 +1,6 @@
+framework module ScrollViewThumbnail {
+  umbrella header "ScrollViewThumbnail-umbrella.h"
+
+  export *
+  module * { export * }
+}
