@@ -26,7 +26,7 @@ import UIKit
     private var scrollView: UIScrollView?
     private var autoHideTimer: Timer?
     private var isAnimation = (status: false, nextVisable: false)
-    private var observers: (offset: NSKeyValueObservation?, zoom: NSKeyValueObservation?)
+    private var observers = [String: NSKeyValueObservation]()
     
     public override init(frame: CGRect) {
         super.init(frame: frame)
@@ -39,8 +39,7 @@ import UIKit
     }
     
     deinit {
-        observers.offset?.invalidate()
-        observers.zoom?.invalidate()
+        observers.values.forEach({ $0.invalidate() })
         autoHideTimer?.invalidate()
     }
     
@@ -65,12 +64,13 @@ import UIKit
     
     public func bindScrollView(_ sv: UIScrollView) {
         scrollView = sv
-        observers.offset = sv.observe(\.contentOffset, changeHandler: {[weak self] view, value in
+        observers["offset"] = sv.observe(\.contentOffset, changeHandler: {[weak self] view, value in
             self?.updateScrollViewStatus()
         })
-        observers.zoom = sv.observe(\.zoomScale, changeHandler: {[weak self] view, value in
+        observers["zoom"] = sv.observe(\.zoomScale, changeHandler: {[weak self] view, value in
             self?.updateScrollViewStatus()
         })
+        
         updateScrollViewStatus()
     }
     
@@ -78,7 +78,6 @@ import UIKit
 
     
     @objc public func updateScrollViewStatus() {
-        
         guard let sv = scrollView,
             let zView = sv.delegate?.viewForZooming?(in: sv),
             let spView = sv.superview else { return }
@@ -136,8 +135,13 @@ import UIKit
                 if isHidden {
                     alpha = 0
                     isHidden = false
+                } else if alpha == 1 {
+                    isAnimation.status = false
+                    return
                 }
-                UIView.animate(withDuration: fadeAnimationDuration, animations: {
+                let duration = TimeInterval(1 - alpha) * fadeAnimationDuration
+//                print("Start animation")
+                UIView.animate(withDuration: duration, animations: {
                     self.alpha = 1
                 }, completion: { _ in
                     self.isAnimation.status = false
@@ -145,8 +149,16 @@ import UIKit
             } else {
                 if isHidden {
                     alpha = 0
+                    isAnimation.status = false
                 } else {
-                    UIView.animate(withDuration: fadeAnimationDuration, animations: {
+                    if alpha.isZero {
+                        isHidden = true
+                        isAnimation.status = false
+                        return
+                    }
+                    let duration = TimeInterval(alpha) * fadeAnimationDuration
+//                    print("Start animation")
+                    UIView.animate(withDuration: duration, animations: {
                         self.alpha = 0
                     }, completion: { _ in
                         self.isHidden = true
