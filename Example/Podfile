@@ -1,0 +1,11 @@
+use_frameworks!
+
+target 'ScrollViewThumbnail_Example' do
+  pod 'ScrollViewThumbnail', :path => '../'
+
+  target 'ScrollViewThumbnail_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end
